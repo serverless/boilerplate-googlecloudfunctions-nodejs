@@ -1,4 +1,4 @@
-service: gcf-service # NOTE: Don't put the word "google" in here
+service: my-gcf-service # NOTE: Don't put the word "google" in here
 
 provider:
   name: google
@@ -19,16 +19,17 @@ package:
     - .git/**
 
 functions:
-  fist:
-    handler: pubSub
-    events:
-      - pubSub: someTopicName
-  second:
+  first:
     handler: http
     events:
-      - http: true
-  # NOTE: Please create the bucket first, then comment this out and deploy again
-  #third:
-  #  handler: bucket
+      - http: path
+  
+  # NOTE: the following uses an "event" event (an pubSub event in this case).
+  # Please create the corresponding resources before deploying through Serverless
+  
+  #second:
+  #  handler: event
   #  events:
-  #    - bucket: my-serverless-test-bucket
+  #    - event:
+  #        eventType: providers/cloud.pubsub/eventTypes/topic.publish
+  #        resource: projects/*/topics/my-topic
