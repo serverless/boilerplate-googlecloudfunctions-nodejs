@@ -1,17 +1,11 @@
 'use strict';
 
-exports.pubSub = (context, data) => {
-  console.log('Hello from a "pubSub" event');
-  console.log(data);
-  context.success();
-};
-
 exports.http = (request, response) => {
+  console.log('Hello from "HTTP"');
   response.status(200).send('Hello World!');
 };
 
-exports.bucket = (context, data) => {
-  console.log('Hello from a "bucket" event');
-  console.log(data);
-  context.success();
+exports.event = (event, callback) => {
+  console.log('Hello from an "event" event');
+  callback();
 };
