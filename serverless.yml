@@ -2,7 +2,7 @@ service: my-gcf-service # NOTE: Don't put the word "google" in here
 
 provider:
   name: google
-  runtime: nodejs4.3
+  runtime: nodejs
   project: my-project-1234
   # the path to the credentials file needs to be absolute
   credentials: ~/.gcloud/keyfile.json
