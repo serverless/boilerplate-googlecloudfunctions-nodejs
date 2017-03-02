@@ -4,13 +4,14 @@ provider:
   name: google
   runtime: nodejs4.3
   project: my-project-1234
+  # the path to the credentials file needs to be absolute
   credentials: ~/.gcloud/keyfile.json
 
 plugins:
   - serverless-google-cloudfunctions
 
 # needs more granular excluding in production as only the serverless provider npm
-# package and it's dependencies should be excluded (and not the whole node_modules directory)
+# package should be excluded (and not the whole node_modules directory)
 package:
   exclude:
     - node_modules/**
@@ -24,8 +25,9 @@ functions:
     events:
       - http: path
   
-  # NOTE: the following uses an "event" event (an pubSub event in this case).
-  # Please create the corresponding resources before deploying through Serverless
+  # NOTE: the following uses an "event" event (pubSub event in this case).
+  # Please create the corresponding resources in the Google Cloud
+  # before deploying this service through Serverless
   
   #second:
   #  handler: event
