@@ -1,4 +1,6 @@
-**IMPORTANT NOTE:** This boilerplate is **DEPRECATED**. Please use `serverless create --template google-nodejs` instead
+# IMPORTANT NOTE
+
+This boilerplate is **DEPRECATED**. Please use `serverless create --template google-nodejs` instead
 
 ---
 
