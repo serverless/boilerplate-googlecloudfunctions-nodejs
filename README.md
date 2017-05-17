@@ -1,3 +1,7 @@
+**IMPORTANT NOTE:** This boilerplate is **DEPRECATED**. Please use `serverless create --template google-nodejs` instead
+
+---
+
 # Serverless Boilerplate - Google Cloud Functions - Node.js
 
 A Serverless Framework Boilerplate for Google Cloud Functions support in Node.js
